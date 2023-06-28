@@ -1,6 +1,6 @@
 "use client";
 
-import { GradOutline } from "../components";
+import { FooterCatch, GradOutline } from "../components";
 import { PageWrapper } from "../components/PageWrapper";
 import { motion } from "framer-motion";
 
@@ -61,9 +61,7 @@ export default function About() {
                         index={index}
                     />
                 ))}
-                <p className="self-end text-xs text-gray-500 bottom-10 right-10">
-                    I&apos;m also super into conversation that make me go whaaa-
-                </p>
+                <FooterCatch blind="I'm also super into conversation that make me go whaaa-" />
             </div>
         </PageWrapper>
     );

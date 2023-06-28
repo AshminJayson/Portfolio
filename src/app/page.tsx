@@ -1,7 +1,7 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
-import { GradOutline } from "./components";
+import { FooterCatch, GradOutline } from "./components";
 import { PageWrapper } from "./components/PageWrapper";
 
 function Introduction() {
@@ -57,12 +57,10 @@ function ProfileImage() {
 export default function Home() {
     return (
         <PageWrapper>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
                 <ProfileImage />
                 <Introduction />
-                <p className="self-end text-xs text-gray-500 bottom-10 right-10">
-                    My super power is converting coffee to code!
-                </p>
+                <FooterCatch blind="My superpower is converting coffee to code" />
             </div>
         </PageWrapper>
     );

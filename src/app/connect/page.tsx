@@ -1,6 +1,6 @@
 "use client";
 
-import { GradOutline } from "../components";
+import { FooterCatch, GradOutline } from "../components";
 import { PageWrapper } from "../components/PageWrapper";
 
 function LinkRouter({ url }: { url: string }) {
@@ -46,9 +46,7 @@ export default function Connect() {
                         <p>You know what? I trust you with this 9072738970</p>
                     </div>
                 </div>
-                <p className="self-end text-xs text-gray-500 bottom-10 right-10">
-                    Note: Ask for feedback only if you&apos;ll consider it
-                </p>
+                <FooterCatch blind="Note: Ask for feedback only if you'll consider it" />
             </div>
         </PageWrapper>
     );

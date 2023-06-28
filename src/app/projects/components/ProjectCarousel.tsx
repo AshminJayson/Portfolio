@@ -101,8 +101,9 @@ export function ProjectsCarousel({
     projectsList: ProjectCardProps[];
 }) {
     const [startIndex, setStartIndex] = useState(0);
+
     return (
-        <div className="flex justify-center gap-2 overflow-y-scroll">
+        <div className="flex justify-center gap-2 max-h-[40rem] overflow-y-scroll">
             <div></div>
             <div className="flex flex-col items-center gap-8 py-10 lg:flex-row">
                 {projectsList.map((project, index) => (
