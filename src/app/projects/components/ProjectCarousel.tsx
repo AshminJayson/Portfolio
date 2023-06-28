@@ -3,7 +3,12 @@ import { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { VscPlay } from "react-icons/vsc";
 import { FaAngular, FaReact } from "react-icons/fa";
-import { SiFirebase, SiFastapi } from "react-icons/si";
+import {
+    SiFirebase,
+    SiFastapi,
+    SiSupabase,
+    SiTailwindcss,
+} from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
 import Image from "next/image";
@@ -45,13 +50,25 @@ export function ProjectCard(props: ProjectCardProps) {
                 return (
                     <SiFastapi key={index} size={"1.5rem"} color="#000000" />
                 );
+            case "Supabase":
+                return (
+                    <SiSupabase key={index} size={"1.5rem"} color="#65ce91" />
+                );
+            case "Tailwind":
+                return (
+                    <SiTailwindcss
+                        key={index}
+                        size={"1.5rem"}
+                        color="#62bdf9"
+                    />
+                );
             default:
                 return null;
         }
     };
 
     return (
-        <div className="group transition-all flex flex-col justify-between p-10 gsmContainer relative w-[22rem] h-[18rem] rounded-lg hover:ring-1">
+        <div className="flex-1 group transition-all flex flex-col justify-between p-10 gsmContainer relative min-w-[22rem] h-[18rem] rounded-lg hover:ring-1">
             <Image
                 src={projectImage}
                 alt=""
@@ -84,7 +101,7 @@ export function ProjectCard(props: ProjectCardProps) {
                         />
                     </div>
                 </div>
-                <p className="text-sm text-gray-500">{projectDescription}</p>
+                <p className="text-sm text-gray-300">{projectDescription}</p>
                 <div className="flex justify-center gap-4">
                     {projectTechStack.map((techStack, index) =>
                         getTechStackIcon(techStack, index)
@@ -103,14 +120,10 @@ export function ProjectsCarousel({
     const [startIndex, setStartIndex] = useState(0);
 
     return (
-        <div className="flex justify-center gap-2 max-h-[40rem] overflow-y-scroll">
-            <div></div>
-            <div className="flex flex-col items-center gap-8 py-10 lg:flex-row">
-                {projectsList.map((project, index) => (
-                    <ProjectCard key={index} {...project} />
-                ))}
-            </div>
-            <div></div>
+        <div className="flex flex-col gap-8 py-10 overflow-x-scroll overflow-y-scroll lg:flex-row">
+            {projectsList.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+            ))}
         </div>
     );
 }

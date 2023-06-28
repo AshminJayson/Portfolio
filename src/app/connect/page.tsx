@@ -20,8 +20,8 @@ function LinkRouter({ url }: { url: string }) {
 export default function Connect() {
     return (
         <PageWrapper>
-            <div className="flex flex-col gap-8 justify-evenly">
-                <h3 className="text-2xl font-semibold text-center">
+            <div className="relative z-20 flex flex-col justify-between gap-8">
+                <h3 className="mt-10 text-2xl font-semibold text-center">
                     Let&apos;s get in touch
                 </h3>
                 <div className="mx-auto rounded-lg group gsmContainer hover:ring-1">
@@ -46,7 +46,7 @@ export default function Connect() {
                         <p>You know what? I trust you with this 9072738970</p>
                     </div>
                 </div>
-                <FooterCatch blind="Note: Ask for feedback only if you'll consider it" />
+                <FooterCatch blind="Note: Ask for feedback only if you'll consider it ‼️" />
             </div>
         </PageWrapper>
     );

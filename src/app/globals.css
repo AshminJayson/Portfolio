@@ -12,6 +12,11 @@
     }
 }
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 body {
     color: rgb(var(--foreground-rgb));
     background: #121212;

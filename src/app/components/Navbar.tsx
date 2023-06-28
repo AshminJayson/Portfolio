@@ -20,7 +20,7 @@ export function Navbar() {
     }, [pathName]);
 
     return (
-        <div className="group relative w-min mx-auto h-[5vh]">
+        <div className="group relative w-min mx-auto h-[5vh] z-20">
             <div className="absolute group-hover:-inset-[.5px] group-hover:duration-[2s] bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-10"></div>
             <div className="absolute inset-0 bg-[#121212]"></div>
             <div className="relative gsmContainer flex justify-center gap-8 sm:gap-12 py-2 px-10 rounded-md ring-[0.3px] bg-black text-xs md:text-lg">

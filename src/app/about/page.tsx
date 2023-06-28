@@ -61,7 +61,7 @@ export default function About() {
                         index={index}
                     />
                 ))}
-                <FooterCatch blind="I'm also super into conversation that make me go whaaa-" />
+                <FooterCatch blind="I'm also super into conversation that make me go whaaa- 😲" />
             </div>
         </PageWrapper>
     );
