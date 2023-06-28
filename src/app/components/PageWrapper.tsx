@@ -12,14 +12,14 @@ const Images: string[] = [
     "/images/Ellipse 1.png",
     "/images/Ellipse 2.png",
     "/images/Ellipse 3.png",
-    "/images/Ellipse 4.png",
+    // "/images/Ellipse 4.png",
     // "/images/Ellipse 5.png",
     "/images/Ellipse 6.png",
 ];
 const validPositions: Position[] = [
     { x: "-10vw", y: "-10vh" },
     { x: "30vw", y: "30vh" },
-    { x: "20vw", y: "60vh" },
+    { x: "20vw", y: "50vh" },
     { x: "60vw", y: "20vh" },
     { x: "40vw", y: "10vh" },
 ];
@@ -39,7 +39,7 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
             {Images.map((url, index) => (
                 <motion.div
                     key={index}
-                    className="absolute overflow-y-hidden"
+                    className="absolute overflow-hidden"
                     initial={{ opacity: 0, y: 0 }}
                     animate={{
                         opacity: 1,

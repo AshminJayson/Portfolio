@@ -1,13 +1,16 @@
 // Icons imports
-import { useState } from "react";
+import { MutableRefObject, useRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { VscPlay } from "react-icons/vsc";
-import { FaAngular, FaReact } from "react-icons/fa";
+import { FaAngular, FaReact, FaCaretRight, FaCaretLeft } from "react-icons/fa";
 import {
     SiFirebase,
     SiFastapi,
     SiSupabase,
     SiTailwindcss,
+    SiNodedotjs,
+    SiMongodb,
+    SiExpress,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -28,8 +31,10 @@ export function ProjectCard(props: ProjectCardProps) {
         switch (techStack) {
             case "React":
                 return <FaReact key={index} size={"1.5rem"} color="#7dd8fc" />;
-            case "Node":
-                return <VscPlay key={index} size={"1.5rem"} color="#5d9a42" />;
+            case "Nodejs":
+                return (
+                    <SiNodedotjs key={index} size={"1.5rem"} color="#5d9a42" />
+                );
             case "Angular":
                 return (
                     <FaAngular key={index} size={"1.5rem"} color="#b5162e" />
@@ -61,6 +66,14 @@ export function ProjectCard(props: ProjectCardProps) {
                         size={"1.5rem"}
                         color="#62bdf9"
                     />
+                );
+            case "MongoDB":
+                return (
+                    <SiMongodb key={index} size={"1.5rem"} color="#071e2b" />
+                );
+            case "Express":
+                return (
+                    <SiExpress key={index} size={"1.5rem"} color="#ffffff" />
                 );
             default:
                 return null;
@@ -117,13 +130,39 @@ export function ProjectsCarousel({
 }: {
     projectsList: ProjectCardProps[];
 }) {
-    const [startIndex, setStartIndex] = useState(0);
+    const containerRef = useRef<any>();
+    const [isLeftmostEnd, setLeftmostEnd] = useState<boolean>(true);
+    const [isRightmostEnd, setRightmostEnd] = useState<boolean>(false);
+
+    const handleScroll = () => {
+        const container = containerRef.current;
+        const isEnd =
+            container?.scrollLeft + container.clientWidth >=
+            container.scrollWidth - 100;
+
+        const isStart = container.scrollLeft === 0;
+
+        setLeftmostEnd(isStart);
+        setRightmostEnd(isEnd);
+    };
 
     return (
-        <div className="flex flex-col gap-8 py-10 overflow-x-scroll overflow-y-scroll lg:flex-row">
-            {projectsList.map((project, index) => (
-                <ProjectCard key={index} {...project} />
-            ))}
+        <div className="flex items-center gap-4">
+            <div className={`${isLeftmostEnd ? "invisible" : ""}`}>
+                <FaCaretLeft size={30} />
+            </div>
+            <div
+                ref={containerRef}
+                className="flex flex-col gap-4 py-10 overflow-x-scroll overflow-y-scroll lg:flex-row"
+                onScroll={handleScroll}
+            >
+                {projectsList.map((project, index) => (
+                    <ProjectCard key={index} {...project} />
+                ))}
+            </div>
+            <div className={`${isRightmostEnd ? "invisible" : ""}`}>
+                <FaCaretRight size={30} />
+            </div>
         </div>
     );
 }

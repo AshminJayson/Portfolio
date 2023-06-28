@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { GradOutline } from "./Gradoutline";
 
 const paths = new Map<string, number>([
     ["/", 0],
@@ -21,9 +22,8 @@ export function Navbar() {
 
     return (
         <div className="group relative w-min mx-auto h-[5vh] z-20">
-            <div className="absolute group-hover:-inset-[.5px] group-hover:duration-[2s] bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-10"></div>
-            <div className="absolute inset-0 bg-[#121212]"></div>
-            <div className="relative gsmContainer flex justify-center gap-8 sm:gap-12 py-2 px-10 rounded-md ring-[0.3px] bg-black text-xs md:text-lg">
+            <GradOutline />
+            <div className="relative flex justify-center gap-8 px-10 py-2 text-xs bg-black rounded-md gsmContainer sm:gap-12 md:text-lg">
                 <Link
                     className={`font-normal ${
                         activeIndex == 0

@@ -12,8 +12,7 @@ const ProjectsData: ProjectCardProps[] = [
         projectLink: "https://github.com/AshminJayson/TypeForces",
         deployUrl: "https://typeforces-speed.netlify.app/",
 
-        projectImage:
-            "https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445_1280.jpg",
+        projectImage: "/images/projectimages/Typeforces.png",
         projectTechStack: ["Angular", "Firebase", "Tailwind"],
     },
     {
@@ -22,18 +21,24 @@ const ProjectsData: ProjectCardProps[] = [
             "🪄 Web application to learn basic Data Structures and 🛣️ Algorithms ",
         projectLink: "https://github.com/AshminJayson/DSA_Playbook",
         deployUrl: "https://dsa-playbook.vercel.app/",
-        projectImage:
-            "https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445_1280.jpg",
+        projectImage: "/images/projectimages/DSAplaybook.png",
         projectTechStack: ["Nextjs", "Supabase"],
     },
     {
         projectName: "PomoOnAShell",
+        projectDescription: "🌐Mini Social Network built on the MERN Stack",
+        projectLink: "https://github.com/AshminJayson/FrendZy",
+        deployUrl: "",
+        projectImage: "/images/projectimages/PomoOnAShell.png",
+        projectTechStack: ["React"],
+    },
+    {
+        projectName: "FrendZy",
         projectDescription: "🔗 CLI Pomodoro Timer Built using React + Ink ",
         projectLink: "https://github.com/AshminJayson/PomoOnAShell",
         deployUrl: "",
-        projectImage:
-            "https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445_1280.jpg",
-        projectTechStack: ["React"],
+        projectImage: "/images/projectimages/FrendZy.png",
+        projectTechStack: ["MongoDB", "Express", "React", "Nodejs"],
     },
 ];
 
@@ -42,11 +47,11 @@ export default function Projects() {
         <PageWrapper>
             <div className="relative z-20 flex flex-col gap-4">
                 <h3 className="text-2xl font-semibold text-center">Projects</h3>
-                <p className="text-center text-gray-400">
+                <p className="text-center text-gray-300">
                     Here lies the tools and apps I&apos;ve built
                 </p>
                 <ProjectsCarousel projectsList={ProjectsData} />
-                <p className="text-center text-gray-400">
+                <p className="text-center text-gray-300">
                     &lt; Scroll to see some more &gt;
                 </p>
                 <FooterCatch blind="I wanna be ⚙️⚒️🔨🛠️ tech agnostic in my endeavours" />
