@@ -148,7 +148,11 @@ export function ProjectsCarousel({
 
     return (
         <div className="flex items-center gap-4">
-            <div className={`${isLeftmostEnd ? "invisible" : ""}`}>
+            <div
+                className={`hidden lg:block ${
+                    isLeftmostEnd ? "invisible" : ""
+                }`}
+            >
                 <FaCaretLeft size={30} />
             </div>
             <div
@@ -160,7 +164,11 @@ export function ProjectsCarousel({
                     <ProjectCard key={index} {...project} />
                 ))}
             </div>
-            <div className={`${isRightmostEnd ? "invisible" : ""}`}>
+            <div
+                className={`hidden lg:block ${
+                    isRightmostEnd ? "invisible" : ""
+                }`}
+            >
                 <FaCaretRight size={30} />
             </div>
         </div>
