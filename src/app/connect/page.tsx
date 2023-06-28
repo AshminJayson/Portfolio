@@ -3,11 +3,9 @@
 import { TypeAnimation } from "react-type-animation";
 import { FooterCatch, GradOutline } from "../components";
 import { PageWrapper } from "../components/PageWrapper";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import emailjs from "@emailjs/browser";
+import { useEffect, useState } from "react";
 import { EmailModal } from "./components";
+import { Toaster, toast } from "sonner";
 
 function LinkRouter({ url }: { url: string }) {
     return (
@@ -25,6 +23,20 @@ function LinkRouter({ url }: { url: string }) {
 
 export default function Connect() {
     const [openModal, setOpenModal] = useState<boolean>(false);
+    const [messageCode, setMessageSentCode] = useState<string>("");
+
+    useEffect(() => {
+        switch (messageCode) {
+            case "success":
+                toast.success("Message sent in a ⚡");
+                break;
+            case "error":
+                toast.error("Something bad happened to the message 🙅‍♂️");
+                break;
+        }
+
+        setMessageSentCode("");
+    }, [messageCode]);
     return (
         <PageWrapper>
             <div className="relative z-20 flex flex-col justify-between gap-8">
@@ -69,7 +81,9 @@ export default function Connect() {
             <EmailModal
                 parentSignal={openModal}
                 setParentSignal={setOpenModal}
+                setMessageSentCode={setMessageSentCode}
             />
+            <Toaster richColors position="bottom-center" />
         </PageWrapper>
     );
 }

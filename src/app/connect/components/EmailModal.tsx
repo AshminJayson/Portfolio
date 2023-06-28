@@ -3,13 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 export function EmailModal({
     parentSignal,
     setParentSignal,
+    setMessageSentCode,
 }: {
     parentSignal: boolean;
-    setParentSignal: any;
+    setParentSignal: React.Dispatch<React.SetStateAction<boolean>>;
+    setMessageSentCode: React.Dispatch<React.SetStateAction<string>>;
 }) {
     const divRef = useRef<HTMLDivElement>(null);
     const formRef = useRef<HTMLFormElement>(null);
@@ -23,20 +26,25 @@ export function EmailModal({
 
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
-        emailjs
-            .sendForm(
-                process.env.NEXT_PUBLIC_MAIL_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_MAIL_TEMPLATE_ID!,
-                formRef.current!,
-                process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY
-            )
-            .then((result) => {
-                console.log(result);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-        setParentSignal(false);
+        try {
+            emailjs
+                .sendForm(
+                    process.env.NEXT_PUBLIC_MAIL_SERVICE_ID!,
+                    process.env.NEXT_PUBLIC_MAIL_TEMPLATE_ID!,
+                    formRef.current!,
+                    process.env.NEXT_PUBLIC_MAIL_PUBLIC_KEY
+                )
+                .then(() => {
+                    setMessageSentCode("success");
+                })
+                .catch(() => {
+                    setMessageSentCode("error");
+                });
+        } catch (error) {
+            setMessageSentCode("error");
+        } finally {
+            setParentSignal(false);
+        }
     };
 
     return (
