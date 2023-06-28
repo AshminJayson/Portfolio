@@ -1,1 +1,2 @@
-export { ProjectCard, ProjectsCarousel } from "./ProjectCarousel";
+export { ProjectsCarousel } from "./ProjectCarousel";
+export { ProjectCard } from "./ProjectCard";

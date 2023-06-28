@@ -34,11 +34,28 @@ const ProjectsData: ProjectCardProps[] = [
     },
     {
         projectName: "FrendZy",
-        projectDescription: "🔗 CLI Pomodoro Timer Built using React + Ink ",
+        projectDescription: "🔗 CLI Pomodoro Timer Built using React + Ink",
         projectLink: "https://github.com/AshminJayson/PomoOnAShell",
         deployUrl: "",
         projectImage: "/images/projectimages/Frendzy.png",
         projectTechStack: ["MongoDB", "Express", "React", "Nodejs"],
+    },
+    {
+        projectName: "Banking System",
+        projectDescription: "🏦💵 Micro Project on Mock-Up Banking System",
+        projectLink: "https://github.com/AshminJayson/Banking_System",
+        deployUrl: "",
+        projectImage: "/images/projectimages/Banking_System.png",
+        projectTechStack: ["Mysql", "Flask"],
+    },
+    {
+        projectName: "Fate of the Job",
+        projectDescription:
+            "📜 Extracts data from your resume and lets OPEN AI 🤖 decide your fate",
+        projectLink: "https://github.com/AshminJayson/FateOfTheJob",
+        deployUrl: "",
+        projectImage: "/images/projectimages/FateOfTheJob.png",
+        projectTechStack: ["Nextjs", "Fastapi"],
     },
 ];
 
@@ -52,7 +69,7 @@ export default function Projects() {
                 </p>
                 <ProjectsCarousel projectsList={ProjectsData} />
                 <p className="text-center text-gray-300">
-                    &lt; Scroll to see some more &gt;
+                    Scroll to see some more of what I&apos;ve built
                 </p>
                 <FooterCatch blind="I wanna be ⚙️⚒️🔨🛠️ tech agnostic in my endeavours" />
             </div>
