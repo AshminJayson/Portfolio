@@ -1,5 +1,6 @@
 "use client";
 
+import { TypeAnimation } from "react-type-animation";
 import { FooterCatch, GradOutline } from "../components";
 import { PageWrapper } from "../components/PageWrapper";
 
@@ -12,7 +13,7 @@ function LinkRouter({ url }: { url: string }) {
                 else window.open(url);
             }}
         >
-            {url}
+            <TypeAnimation cursor={false} sequence={[`${url}`]} />
         </span>
     );
 }
@@ -24,7 +25,7 @@ export default function Connect() {
                 <h3 className="mt-10 text-2xl font-semibold text-center">
                     Let&apos;s get in touch
                 </h3>
-                <div className="mx-auto rounded-lg group gsmContainer hover:ring-1">
+                <div className="mx-auto rounded-lg group gsmContainer hover:ring-1 min-w-[42rem]">
                     <GradOutline />
                     <div className="relative z-20 flex flex-col gap-6 p-8">
                         <p>

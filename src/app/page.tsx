@@ -3,6 +3,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { FooterCatch, GradOutline } from "./components";
 import { PageWrapper } from "./components/PageWrapper";
+import Image from "next/image";
 
 function Introduction() {
     return (
@@ -46,10 +47,21 @@ function ProfileImage() {
             <div className="rounded-md group-hover:translate-x-6 transition-all group-hover:opacity-100 opacity-0 group-hover:-translate-y-6 gsmContainer inset-0 absolute w-[14rem] h-[16rem]">
                 <GradOutline />
                 <p className="relative z-20 p-1 px-2 text-xs italic text-gray-400">
-                    Here&apos;s me!
+                    Nice to see you too❗
                 </p>
             </div>
-            <div className="rounded-md gsmContainer w-[14rem] h-[16rem]"></div>
+            <div className="group rounded-md gsmContainer w-[14rem] h-[16rem] flex justify-center items-center relative">
+                <Image
+                    src="/images/Profile.jpg"
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="w-full h-full transition-opacity duration-300 rounded-md opacity-0 group-hover:opacity-100"
+                ></Image>
+                <p className="absolute text-sm group-hover:hidden">
+                    Hover to Take a peek
+                </p>
+            </div>
         </div>
     );
 }

@@ -92,7 +92,7 @@ export function ProjectCard(props: ProjectCardProps) {
 
             <GradOutline />
 
-            <div className="relative z-20 flex flex-col justify-between h-full rounded-lg">
+            <div className="relative z-20 flex flex-col justify-between h-full gap-2 rounded-lg">
                 <div className="flex">
                     <h3 className="text-lg font-medium">{projectName}</h3>
                     <div className="flex gap-2 ml-auto">
@@ -157,7 +157,7 @@ export function ProjectsCarousel({
             </div>
             <div
                 ref={containerRef}
-                className="flex flex-col gap-4 py-10 overflow-x-scroll overflow-y-scroll lg:flex-row"
+                className="flex flex-col gap-4 px-10 py-10 overflow-x-scroll overflow-y-scroll lg:flex-row"
                 onScroll={handleScroll}
             >
                 {projectsList.map((project, index) => (
