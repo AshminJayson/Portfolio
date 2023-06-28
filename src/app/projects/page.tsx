@@ -21,7 +21,7 @@ const ProjectsData: ProjectCardProps[] = [
             "🪄 Web application to learn basic Data Structures and 🛣️ Algorithms ",
         projectLink: "https://github.com/AshminJayson/DSA_Playbook",
         deployUrl: "https://dsa-playbook.vercel.app/",
-        projectImage: "/images/projectimages/DSAplaybook.png",
+        projectImage: "/images/projectimages/DSAPlaybook.png",
         projectTechStack: ["Nextjs", "Supabase"],
     },
     {
@@ -37,7 +37,7 @@ const ProjectsData: ProjectCardProps[] = [
         projectDescription: "🔗 CLI Pomodoro Timer Built using React + Ink ",
         projectLink: "https://github.com/AshminJayson/PomoOnAShell",
         deployUrl: "",
-        projectImage: "/images/projectimages/FrendZy.png",
+        projectImage: "/images/projectimages/Frendzy.png",
         projectTechStack: ["MongoDB", "Express", "React", "Nodejs"],
     },
 ];
