@@ -65,7 +65,7 @@ export default function Projects() {
             <div className="relative z-20 flex flex-col gap-4">
                 <h3 className="text-2xl font-semibold text-center">Projects</h3>
                 <p className="text-center text-gray-300">
-                    Here lies the tools and apps I&apos;ve built
+                    Here are the tools and apps I&apos;ve built
                 </p>
                 <ProjectsCarousel projectsList={ProjectsData} />
                 <p className="text-center text-gray-300">

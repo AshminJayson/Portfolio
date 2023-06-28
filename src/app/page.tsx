@@ -11,7 +11,15 @@ function Introduction() {
             <GradOutline />
             <div className="relative z-20 flex flex-col gap-6">
                 <h5 className="font-semibold text-gray-500">
-                    Full Stack Developer | AI Enthusiast | Intern @Polymath AI
+                    Full Stack Developer | AI Enthusiast | Intern{" "}
+                    <span
+                        className="cursor-pointer "
+                        onClick={() => {
+                            window.open("https://trypolymath.ai/");
+                        }}
+                    >
+                        @Polymath AI
+                    </span>
                 </h5>
                 <div className="flex flex-col gap-4">
                     <h3 className="text-4xl font-semibold">
@@ -69,7 +77,7 @@ function ProfileImage() {
 export default function Home() {
     return (
         <PageWrapper>
-            <div className="flex flex-col gap-10 md:gap-0">
+            <div className="flex flex-col gap-10 select-none md:gap-0">
                 <ProfileImage />
                 <Introduction />
                 <FooterCatch blind="My superpower is converting coffee ☕ to code 🧑‍💻" />

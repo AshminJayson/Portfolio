@@ -27,7 +27,7 @@ export function ProjectsCarousel({
     };
 
     return (
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 select-none">
             <div
                 className={`hidden lg:block hover:-translate-x-1 transition-all ${
                     isLeftmostEnd ? "invisible" : ""

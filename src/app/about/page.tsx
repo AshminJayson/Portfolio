@@ -20,7 +20,7 @@ function MessageBox({ message, blind, index }: MessageBoxProps) {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0, transition: { delay: 0.1 } }}
             exit={{ opacity: 0, x: 100 }}
-            className={`max-w-2xl ${getFlexPos()} p-6 rounded-lg group gsmContainer hover:ring-1`}
+            className={`max-w-2xl select-none ${getFlexPos()} p-6 rounded-lg group gsmContainer hover:ring-1`}
         >
             <GradOutline />
             <div className="relative z-20 flex flex-col gap-4">
@@ -44,7 +44,7 @@ const Messages = [
     },
     {
         message:
-            "I' on the lookout for amazing opportunities to build freelance projects and also gain exposure through internships.",
+            "I'm on the lookout for amazing opportunities to build freelance projects and also gain exposure through internships.",
         blind: "Opportunities here I come",
     },
 ];

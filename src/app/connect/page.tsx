@@ -3,6 +3,11 @@
 import { TypeAnimation } from "react-type-animation";
 import { FooterCatch, GradOutline } from "../components";
 import { PageWrapper } from "../components/PageWrapper";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import emailjs from "@emailjs/browser";
+import { EmailModal } from "./components";
 
 function LinkRouter({ url }: { url: string }) {
     return (
@@ -19,6 +24,7 @@ function LinkRouter({ url }: { url: string }) {
 }
 
 export default function Connect() {
+    const [openModal, setOpenModal] = useState<boolean>(false);
     return (
         <PageWrapper>
             <div className="relative z-20 flex flex-col justify-between gap-8">
@@ -44,11 +50,26 @@ export default function Connect() {
                             Do checkout my projects on{" "}
                             <LinkRouter url="https://github.com/AshminJayson/" />
                         </p>
-                        <p>You know what? I trust you with this 9072738970</p>
+                        <p>
+                            You know what? I trust you with this{" "}
+                            <LinkRouter url="http://wa.me/+919072738970" />
+                        </p>
+                        <button
+                            onClick={() => {
+                                setOpenModal(true);
+                            }}
+                            className="text-gray-300 hover:text-transparent bg-gradient-to-r from-purple-800 to-indigo-600 bg-clip-text"
+                        >
+                            Click to tell me something quick ❗
+                        </button>
                     </div>
                 </div>
                 <FooterCatch blind="Note: Ask for feedback only if you'll consider it ‼️" />
             </div>
+            <EmailModal
+                parentSignal={openModal}
+                setParentSignal={setOpenModal}
+            />
         </PageWrapper>
     );
 }
