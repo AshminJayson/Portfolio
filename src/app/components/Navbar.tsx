@@ -15,16 +15,16 @@ const paths = new Map<string, number>([
 export function Navbar() {
     const pathName = usePathname();
     const [activeIndex, setActiveIndex] = useState<number>(0);
+    const [isLargeDevice, setIsLargeDevice] = useState<boolean>(false);
 
     useEffect(() => {
         setActiveIndex(paths.get(pathName)!);
+        if (window.innerWidth > 768) setIsLargeDevice(true);
     }, [pathName]);
-
-    const isLargeDevice = () => (window.innerWidth > 768 ? true : false);
 
     return (
         <div className="group relative w-min mx-auto h-[5vh] z-20">
-            {isLargeDevice() && <GradOutline />}
+            {isLargeDevice && <GradOutline />}
             <div className="relative flex justify-center gap-8 px-10 py-2 text-xs bg-black rounded-md group-hover:ring-[0.5px] gsmContainer sm:gap-12 md:text-lg">
                 <Link
                     className={`font-normal ${
