@@ -16,15 +16,14 @@ export function Navbar() {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     useEffect(() => {
-        console.log(paths.get(pathName));
         setActiveIndex(paths.get(pathName)!);
     }, [pathName]);
 
     return (
-        <div className="group relative w-max">
+        <div className="group relative w-full sm:w-min h-[5vh]">
             <div className="absolute group-hover:-inset-[.5px] group-hover:duration-[2s] bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-10"></div>
             <div className="absolute inset-0 bg-[#121212]"></div>
-            <div className="relative gsmContainer flex gap-12 py-2 px-10 rounded-md ring-[0.3px] bg-black">
+            <div className="relative gsmContainer flex justify-center gap-8 sm:gap-12 py-2 px-10 rounded-md ring-[0.3px] bg-black text-xs md:text-lg">
                 <Link
                     className={`font-semibold ${
                         activeIndex == 0

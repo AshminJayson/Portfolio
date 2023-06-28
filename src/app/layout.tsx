@@ -21,10 +21,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${ibmPlexMono.className} py-8 px-16 h-screen w-screen`}
+                className={`${ibmPlexMono.className} py-8 px-2 sm:px-16 h-screen overflow-y-scroll w-screen`}
             >
                 <Navbar />
-                <div className="mt-10 flex flex-col gap-8 justify-center">
+                <div className="flex flex-col justify-center h-[90vh]">
                     {children}
                 </div>
             </body>
