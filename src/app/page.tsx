@@ -58,8 +58,8 @@ function ProfileImage() {
                     height={1000}
                     className="w-full h-full transition-opacity duration-300 rounded-md opacity-0 group-hover:opacity-100"
                 ></Image>
-                <p className="absolute text-sm group-hover:hidden">
-                    Hover to Take a peek
+                <p className="absolute p-2 text-sm text-center group-hover:hidden">
+                    Interact to take a peek
                 </p>
             </div>
         </div>

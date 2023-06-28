@@ -20,10 +20,12 @@ export function Navbar() {
         setActiveIndex(paths.get(pathName)!);
     }, [pathName]);
 
+    const isLargeDevice = () => (window.innerWidth > 768 ? true : false);
+
     return (
         <div className="group relative w-min mx-auto h-[5vh] z-20">
-            <GradOutline />
-            <div className="relative flex justify-center gap-8 px-10 py-2 text-xs bg-black rounded-md gsmContainer sm:gap-12 md:text-lg">
+            {isLargeDevice() && <GradOutline />}
+            <div className="relative flex justify-center gap-8 px-10 py-2 text-xs bg-black rounded-md group-hover:ring-[0.5px] gsmContainer sm:gap-12 md:text-lg">
                 <Link
                     className={`font-normal ${
                         activeIndex == 0
