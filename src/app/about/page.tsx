@@ -1,7 +1,7 @@
 "use client";
 
 import { FooterCatch, GradOutline } from "../components";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../components";
 import { motion } from "framer-motion";
 
 interface MessageBoxProps {
@@ -20,7 +20,7 @@ function MessageBox({ message, blind, index }: MessageBoxProps) {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0, transition: { delay: 0.1 } }}
             exit={{ opacity: 0, x: 100 }}
-            className={`max-w-2xl select-none ${getFlexPos()} p-6 rounded-lg group gsmContainer hover:ring-1`}
+            className={`max-w-2xl select-none ${getFlexPos()} z-30 p-6 rounded-lg group gsmContainer hover:ring-1`}
         >
             <GradOutline />
             <div className="relative z-20 flex flex-col gap-4">

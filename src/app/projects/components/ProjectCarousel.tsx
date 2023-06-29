@@ -29,7 +29,7 @@ export function ProjectsCarousel({
     return (
         <div className="flex items-center gap-4 select-none">
             <div
-                className={`hidden lg:block hover:-translate-x-1 transition-all ${
+                className={`hidden h-[18rem] hover:-translate-x-1 transition-all lg:flex items-center ${
                     isLeftmostEnd ? "invisible" : ""
                 }`}
                 onClick={() => {
@@ -57,7 +57,7 @@ export function ProjectsCarousel({
                 ))}
             </div>
             <div
-                className={`hidden lg:block hover:translate-x-1 transition-all ${
+                className={`hidden h-[18rem] lg:flex items-center hover:translate-x-1 transition-all ${
                     isRightmostEnd ? "invisible" : ""
                 }`}
                 onClick={() => {

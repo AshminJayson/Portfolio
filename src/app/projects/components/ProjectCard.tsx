@@ -86,7 +86,7 @@ export function ProjectCard(props: ProjectCardProps) {
                 alt=""
                 width={10000}
                 height={10000}
-                className="absolute top-0 left-0 z-10 w-full h-full rounded-lg opacity-20"
+                className="absolute top-0 left-0 z-30 w-full h-full rounded-lg opacity-20"
             ></Image>
 
             <GradOutline />

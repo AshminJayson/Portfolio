@@ -1,7 +1,6 @@
 "use client";
 
-import { FooterCatch } from "../components";
-import { PageWrapper } from "../components/PageWrapper";
+import { FooterCatch, PageWrapper } from "../components";
 import { ProjectsCarousel } from "./components";
 import { ProjectsData } from "./projects";
 
@@ -14,8 +13,14 @@ export default function Projects() {
                     Here are the tools and apps I&apos;ve built
                 </p>
                 <ProjectsCarousel projectsList={ProjectsData} />
-                <p className="text-center text-gray-300">
-                    Scroll to see some more of what I&apos;ve built
+                <p
+                    className="text-center text-gray-300 cursor-pointer"
+                    onClick={() => {
+                        window.open("https://www.github.com/AshminJayson");
+                    }}
+                >
+                    Tap here to contribute to any of my projects or collaborate
+                    on a new one !
                 </p>
                 <FooterCatch blind="I wanna be ⚙️⚒️🔨🛠️ tech agnostic in my endeavours" />
             </div>

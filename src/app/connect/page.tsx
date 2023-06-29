@@ -2,7 +2,7 @@
 
 import { TypeAnimation } from "react-type-animation";
 import { FooterCatch, GradOutline } from "../components";
-import { PageWrapper } from "../components/PageWrapper";
+import { PageWrapper } from "../components/";
 import { useEffect, useState } from "react";
 import { EmailModal } from "./components";
 import { Toaster, toast } from "sonner";
@@ -39,7 +39,7 @@ export default function Connect() {
     }, [messageCode]);
     return (
         <PageWrapper>
-            <div className="relative z-20 flex flex-col justify-between gap-8">
+            <div className="relative z-20 flex flex-col justify-between gap-8 mx-auto max-w-max">
                 <h3 className="mt-10 text-2xl font-semibold text-center">
                     Let&apos;s get in touch
                 </h3>
