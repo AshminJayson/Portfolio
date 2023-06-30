@@ -43,7 +43,7 @@ export default function Connect() {
                 <h3 className="mt-10 text-2xl font-semibold text-center">
                     Let&apos;s get in touch
                 </h3>
-                <div className="mx-auto rounded-lg group gsmContainer hover:ring-1 lg:min-w-[42rem]">
+                <div className="mx-auto rounded-lg group gsmContainerLight dark:gsmContainerDark hover:ring-1 lg:min-w-[42rem]">
                     <GradOutline />
                     <div className="relative z-20 flex flex-col gap-6 p-8">
                         <p>

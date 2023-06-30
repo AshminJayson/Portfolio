@@ -3,7 +3,7 @@ import { GradOutline } from "..";
 
 export function IntroductionCard() {
     return (
-        <div className="group z-30 gsmContainer self-center sm:self-start rounded-xl w-[25rem] sm:w-[40rem] p-10 ring-[0.3px] min-h-[17rem]">
+        <div className="group z-30 gsmContainerLight dark:gsmContainerDark self-center sm:self-start rounded-xl w-[25rem] sm:w-[40rem] p-10 ring-[0.3px] min-h-[17rem]">
             <GradOutline />
             <div className="relative flex flex-col gap-6">
                 <h5 className="font-semibold text-gray-900 dark:text-gray-500">

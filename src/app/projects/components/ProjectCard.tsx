@@ -80,7 +80,7 @@ export function ProjectCard(props: ProjectCardProps) {
     };
 
     return (
-        <div className="flex-1 group transition-all flex flex-col justify-between p-10 gsmContainer relative min-w-[22rem] h-[18rem] rounded-lg hover:ring-1">
+        <div className="flex-1 group transition-all flex flex-col justify-between p-10 gsmContainerLight dark:gsmContainerDark relative min-w-[22rem] h-[18rem] rounded-lg hover:ring-1">
             <Image
                 src={projectImage}
                 alt=""

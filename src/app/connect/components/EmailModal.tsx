@@ -60,7 +60,7 @@ export function EmailModal({
                         initial={{ x: 0, y: 200 }}
                         animate={{ x: 0, y: 0 }}
                         // exit={{ x: 0, y: 200 }}
-                        className="flex flex-col p-8 rounded-lg gsmContainer group min-w-[40vw]"
+                        className="flex flex-col p-8 rounded-lg gsmContainerLight dark:gsmContainerDark group min-w-[40vw]"
                     >
                         {parentSignal && <GradOutline />}
                         <div className="z-20">

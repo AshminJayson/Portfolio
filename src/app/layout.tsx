@@ -21,7 +21,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${ibmPlexMono.className} py-8 px-2 sm:px-16 h-screen relative w-screen`}
+                className={`${ibmPlexMono.className} py-8 px-2 sm:px-16 h-screen relative w-screen text-black dark:text-white bg-white dark:bg-black`}
             >
                 <Navbar />
                 <div className="flex flex-col justify-center mt-10">
