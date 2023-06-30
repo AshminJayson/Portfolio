@@ -20,7 +20,7 @@ export const ProjectsData: ProjectCardProps[] = [
     },
     {
         projectName: "PomoOnAShell",
-        projectDescription: "🌐Mini Social Network built on the MERN Stack",
+        projectDescription: "🔗 CLI Pomodoro Timer Built using React + Ink",
         projectLink: "https://github.com/AshminJayson/PomoOnAShell",
         deployUrl: "",
         projectImage: "/images/projectimages/PomoOnAShell.png",
@@ -28,7 +28,7 @@ export const ProjectsData: ProjectCardProps[] = [
     },
     {
         projectName: "FrendZy",
-        projectDescription: "🔗 CLI Pomodoro Timer Built using React + Ink",
+        projectDescription: "🌐Mini Social Network built on the MERN Stack",
         projectLink: "https://github.com/AshminJayson/FrendZy",
         deployUrl: "",
         projectImage: "/images/projectimages/Frendzy.png",
