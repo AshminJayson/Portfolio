@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
-import { toast } from "sonner";
 
 export function EmailModal({
     parentSignal,
@@ -51,7 +50,7 @@ export function EmailModal({
         <motion.div
             ref={divRef}
             tabIndex={0}
-            className={`absolute top-0 flex justify-center items-center left-0 bg-black/80 h-screen w-screen z-30 ${
+            className={`absolute top-0 flex justify-center items-center left-0 bg-white/80 dark:bg-black/80 h-screen w-screen z-30 ${
                 parentSignal ? "visible" : "invisible"
             }`}
         >
@@ -85,7 +84,7 @@ export function EmailModal({
                                     <input
                                         type="text"
                                         name="from_name"
-                                        className="w-full px-2 py-1 text-white bg-transparent outline-none focus:outline"
+                                        className="w-full px-2 py-1 bg-transparent outline-none dark:text-white focus:outline"
                                         placeholder="Kimi no namai wa?"
                                         required
                                     />
@@ -95,7 +94,7 @@ export function EmailModal({
                                     <input
                                         type="email"
                                         name="email"
-                                        className="w-full px-2 py-1 text-white bg-transparent outline-none"
+                                        className="w-full px-2 py-1 bg-transparent outline-none dark:text-white"
                                         placeholder="You email perhaps?"
                                         required
                                     />
@@ -104,7 +103,7 @@ export function EmailModal({
                                     <span>🦜</span>
                                     <textarea
                                         name="message"
-                                        className="w-full px-2 py-1 text-white bg-transparent outline-none"
+                                        className="w-full px-2 py-1 bg-transparent outline-none dark:text-white"
                                         placeholder="So what'd you wanna talk about?"
                                         required
                                     />

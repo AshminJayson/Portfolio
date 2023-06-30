@@ -9,12 +9,12 @@ export default function Projects() {
         <PageWrapper>
             <div className="relative z-20 flex flex-col gap-4">
                 <h3 className="text-2xl font-semibold text-center">Projects</h3>
-                <p className="text-center text-gray-300">
+                <p className="text-center text-gray-800 dark:text-gray-300">
                     Here are the tools and apps I&apos;ve built
                 </p>
                 <ProjectsCarousel projectsList={ProjectsData} />
                 <p
-                    className="text-center text-gray-300 cursor-pointer"
+                    className="text-center text-gray-800 cursor-pointer dark:text-gray-300"
                     onClick={() => {
                         window.open("https://www.github.com/AshminJayson");
                     }}

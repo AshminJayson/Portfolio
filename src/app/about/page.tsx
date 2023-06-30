@@ -25,7 +25,9 @@ function MessageBox({ message, blind, index }: MessageBoxProps) {
             <GradOutline />
             <div className="relative z-20 flex flex-col gap-4">
                 <p>{message}</p>
-                <p className="ml-auto text-xs text-gray-400">{blind}</p>
+                <p className="ml-auto text-xs text-gray-800 dark:text-gray-400">
+                    {blind}
+                </p>
             </div>
         </motion.div>
     );

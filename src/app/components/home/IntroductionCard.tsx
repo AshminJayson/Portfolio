@@ -6,7 +6,7 @@ export function IntroductionCard() {
         <div className="group z-30 gsmContainer self-center sm:self-start rounded-xl w-[25rem] sm:w-[40rem] p-10 ring-[0.3px] min-h-[17rem]">
             <GradOutline />
             <div className="relative flex flex-col gap-6">
-                <h5 className="font-semibold text-gray-500">
+                <h5 className="font-semibold text-gray-900 dark:text-gray-500">
                     Full Stack Developer | AI Enthusiast | Intern{" "}
                     <span
                         className="cursor-pointer "

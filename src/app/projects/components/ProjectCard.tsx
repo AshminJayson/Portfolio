@@ -86,7 +86,7 @@ export function ProjectCard(props: ProjectCardProps) {
                 alt=""
                 width={10000}
                 height={10000}
-                className="absolute top-0 left-0 z-10 w-full h-full rounded-lg opacity-20"
+                className="absolute top-0 left-0 z-10 w-full h-full rounded-lg opacity-10 dark:opacity-20"
             ></Image>
 
             <GradOutline />
@@ -113,7 +113,9 @@ export function ProjectCard(props: ProjectCardProps) {
                         />
                     </div>
                 </div>
-                <p className="text-sm text-gray-300">{projectDescription}</p>
+                <p className="text-sm text-gray-800 dark:text-gray-300">
+                    {projectDescription}
+                </p>
                 <div className="flex items-center justify-center gap-4">
                     {projectTechStack.map((techStack, index) =>
                         getTechStackIcon(techStack, index)

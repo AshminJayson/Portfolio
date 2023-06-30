@@ -7,7 +7,7 @@ export function ProfileImage() {
         <div className="relative z-30 self-center mb-10 sm:mb-0 sm:self-end group lg:mr-20">
             <div className="rounded-md group-hover:translate-x-6 transition-all group-hover:opacity-100 opacity-0 group-hover:-translate-y-6 gsmContainer inset-0 absolute w-[14rem] h-[16rem]">
                 <GradOutline />
-                <p className="relative p-1 px-2 text-xs italic text-gray-400">
+                <p className="relative p-1 px-2 text-xs italic text-gray-800 dark:text-gray-400">
                     Nice to see you too❗
                 </p>
             </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
 }
 
 body,
@@ -13,25 +13,31 @@ html {
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: #121212;
-}
-
-*::-webkit-scrollbar {
-    display: none;
-}
-
-* {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    background: #ffffff;
 }
 
 .gsmContainer {
     background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.05) 0%,
-        rgba(255, 255, 255, 0) 100%
+        135deg,
+        rgba(21, 21, 21, 0.2) 0%,
+        rgba(21, 21, 21, 0) 100%
     );
     backdrop-filter: blur(60px);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background: #121212;
+    }
+    .gsmContainer {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        backdrop-filter: blur(60px);
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -58,4 +64,13 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
     -webkit-transition-delay: 9999s;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

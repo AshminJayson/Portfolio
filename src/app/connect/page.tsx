@@ -70,7 +70,7 @@ export default function Connect() {
                             onClick={() => {
                                 setOpenModal(true);
                             }}
-                            className="text-gray-300 hover:text-transparent bg-gradient-to-r from-purple-800 to-indigo-600 bg-clip-text"
+                            className="text-gray-800 dark:text-gray-300 hover:text-transparent bg-gradient-to-r from-purple-800 to-indigo-600 bg-clip-text"
                         >
                             Click to tell me something quick ❗
                         </button>
