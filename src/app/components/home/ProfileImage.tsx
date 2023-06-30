@@ -12,7 +12,12 @@ export function ProfileImage() {
                 </p>
             </div>
             <div className="absolute z-30 w-12 h-12 translate-x-2 translate-y-2 rounded-full opacity-0 group-hover:opacity-100">
-                <IoFlash />
+                <IoFlash
+                    className="cursor-pointer hover:text-orange-400"
+                    onClick={() => {
+                        window.open("https://github.com/AshminJayson");
+                    }}
+                />
             </div>
             <div className="rounded-md gsmContainer w-[14rem] h-[16rem] flex justify-center items-center relative">
                 <Image
