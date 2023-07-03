@@ -36,7 +36,7 @@ function MessageBox({ message, blind, index }: MessageBoxProps) {
 const Messages = [
     {
         message:
-            "I'm presently a 3rd year Data Science student at Mar Athanasius College of Engineering Kothamangalam tredding my way through course work while also dipping my toes in any technology I can find.",
+            "I'm a pre-final year Data Science student at Mar Athanasius College of Engineering Kothamangalam tredding my way through course work while also dipping my toes in any technology I can find.",
         blind: "Sometimes you just wish you had a lot less classes",
     },
     {

@@ -6,11 +6,14 @@ import { PageWrapper } from "../components/";
 import { useEffect, useState } from "react";
 import { EmailModal } from "./components";
 import { Toaster, toast } from "sonner";
+import { FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from "react-icons/fa";
+import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 function LinkRouter({ url }: { url: string }) {
     return (
         <span
-            className="cursor-pointer"
+            className="ml-2 cursor-pointer"
             onClick={() => {
                 if (url.endsWith("@gmail.com")) window.open(`mailto:${url}`);
                 else window.open(url);
@@ -20,6 +23,14 @@ function LinkRouter({ url }: { url: string }) {
         </span>
     );
 }
+
+const socialUrls = {
+    email: "ashminjayson10@gmail.com",
+    github: "https://github.com/AshminJayson/",
+    linkedin: "https://www.linkedin.com/in/ashmin-jayson/",
+    twitter: "https://twitter.com/JaysonAshmin",
+    whatsapp: "http://wa.me/+919072738970",
+};
 
 export default function Connect() {
     const [openModal, setOpenModal] = useState<boolean>(false);
@@ -46,31 +57,55 @@ export default function Connect() {
                 <div className="mx-auto rounded-lg group gsmContainerLight dark:gsmContainerDark hover:ring-1 lg:min-w-[42rem]">
                     <GradOutline />
                     <div className="relative z-20 flex flex-col gap-6 p-8">
-                        <p>
-                            Mail me at{" "}
-                            <LinkRouter url="ashminjayson10@gmail.com" />
+                        <p className="flex items-center justify-start">
+                            <AiOutlineMail
+                                size={20}
+                                className="mr-3 cursor-pointer"
+                                onClick={() => window.open(socialUrls.email)}
+                            />
+                            Mail me at <LinkRouter url={socialUrls.email} />
                         </p>
-                        <p>
+                        <p className="flex items-center justify-start">
+                            <FaLinkedin
+                                size={20}
+                                className="mr-3 cursor-pointer"
+                                onClick={() => window.open(socialUrls.linkedin)}
+                            />
                             Connect on LinkedIn?{" "}
-                            <LinkRouter url="https://www.linkedin.com/in/ashmin-jayson/" />
+                            <LinkRouter url={socialUrls.linkedin} />
                         </p>
-                        <p>
+                        <p className="flex items-center justify-start">
+                            <FaTwitter
+                                size={20}
+                                className="mr-3 cursor-pointer"
+                                onClick={() => window.open(socialUrls.twitter)}
+                            />
                             Tweet and a follow??{" "}
-                            <LinkRouter url="https://twitter.com/JaysonAshmin" />
+                            <LinkRouter url={socialUrls.twitter} />
                         </p>
-                        <p>
+                        <p className="flex items-center justify-start">
+                            <FaGithub
+                                size={20}
+                                className="mr-3 cursor-pointer"
+                                onClick={() => window.open(socialUrls.github)}
+                            />
                             Do checkout my projects on{" "}
-                            <LinkRouter url="https://github.com/AshminJayson/" />
+                            <LinkRouter url={socialUrls.github} />
                         </p>
-                        <p>
+                        <p className="flex items-center justify-start">
+                            <AiOutlineWhatsApp
+                                size={20}
+                                className="mr-3 cursor-pointer"
+                                onClick={() => window.open(socialUrls.whatsapp)}
+                            />
                             You know what? I trust you with this{" "}
-                            <LinkRouter url="http://wa.me/+919072738970" />
+                            <LinkRouter url={socialUrls.whatsapp} />
                         </p>
                         <button
                             onClick={() => {
                                 setOpenModal(true);
                             }}
-                            className="text-gray-800 dark:text-gray-300 hover:text-transparent bg-gradient-to-r from-purple-800 to-indigo-600 bg-clip-text"
+                            className="text-gray-800 dark:text-gray-100 hover:text-transparent bg-gradient-to-r from-purple-800 to-indigo-600 bg-clip-text"
                         >
                             Click to tell me something quick ❗
                         </button>
