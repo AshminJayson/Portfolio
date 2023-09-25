@@ -57,7 +57,7 @@ export default function Connect() {
                 <div className="mx-auto rounded-lg group gsmContainerLight dark:gsmContainerDark hover:ring-1 lg:min-w-[42rem]">
                     <GradOutline />
                     <div className="relative z-20 flex flex-col gap-6 p-8">
-                        <p className="flex items-center justify-start">
+                        <p className="flex flex-col md:flex-row items-center justify-start">
                             <AiOutlineMail
                                 size={20}
                                 className="mr-3 cursor-pointer"
@@ -65,7 +65,7 @@ export default function Connect() {
                             />
                             Mail me at <LinkRouter url={socialUrls.email} />
                         </p>
-                        <p className="flex items-center justify-start">
+                        <p className="flex flex-col md:flex-row items-center justify-start">
                             <FaLinkedin
                                 size={20}
                                 className="mr-3 cursor-pointer"
@@ -74,7 +74,7 @@ export default function Connect() {
                             Connect on LinkedIn?{" "}
                             <LinkRouter url={socialUrls.linkedin} />
                         </p>
-                        <p className="flex items-center justify-start">
+                        <p className="flex flex-col md:flex-row items-center justify-start">
                             <FaTwitter
                                 size={20}
                                 className="mr-3 cursor-pointer"
@@ -83,7 +83,7 @@ export default function Connect() {
                             Tweet and a follow??{" "}
                             <LinkRouter url={socialUrls.twitter} />
                         </p>
-                        <p className="flex items-center justify-start">
+                        <p className="flex flex-col md:flex-row items-center justify-start">
                             <FaGithub
                                 size={20}
                                 className="mr-3 cursor-pointer"
@@ -92,7 +92,7 @@ export default function Connect() {
                             Do checkout my projects on{" "}
                             <LinkRouter url={socialUrls.github} />
                         </p>
-                        <p className="flex items-center justify-start">
+                        <p className="flex flex-col md:flex-row items-center justify-start">
                             <AiOutlineWhatsApp
                                 size={20}
                                 className="mr-3 cursor-pointer"
